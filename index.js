@@ -28,15 +28,15 @@ require("./Functions/eventsLoader.js").run(client, tempDatabase)
 
 client.on("messageCreate", message => {
   if (message.content.startsWith("+leave")) {
-    if (message.author.id !== "593536295507329049") return message.reply("**فقط اونر البوت يمكنه استعمال ذلك الامر**")
+    if (message.author.id !== "589154804601716838") return message.reply("**ONLY BOT OWNER USE THIS COMMAND**")
     const guild = client.guilds.cache.get(message.content.split(" ")[1])
-    if (!guild) return message.reply("**لم اتمكن من العثور علي هذا السيرفر**")
-    message.reply(`**تم الخروج من هذا السيرفر بنجاح**`)
+    if (!guild) return message.reply("**I can't find this server**")
+    message.reply(`**I have successfully exited from this server**`)
     guild.leave()
   }
 })
 
-const owners = ["593536295507329049", "", ""]
+const owners = ["589154804601716838", "", ""]
 
 client.on("messageCreate", message => {
   if (message.content.startsWith("+servers")) {
